@@ -13,7 +13,7 @@ module tt_um_sumador (
   wire [3:0] ina,inb;
   reg [7:0] sum;
   
-  
+  // Numeros de entrada
   assign ina[3:0] = ui_in[3:0];
   assign inb[3:0] = ui_in[7:4];
   assign uo_out = sum;
