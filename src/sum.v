@@ -20,7 +20,7 @@ module tt_um_sumador (
  
   always@(posedge clk) begin
 
-    if(reset) uio_out = 8'd0;
+    if(!rst_n) uio_out = 8'd0;
     else sum = {3'd0,ina+inb};
     
   end
