@@ -16,7 +16,7 @@ module tt_um_sumador (
   
   assign ina[3:0] = ui_in[3:0];
   assign inb[3:0] = ui_in[7:4];
-    assign uo_out = oui_out;
+    assign uo_out = sum;
  
   always@(posedge clk) begin
 
