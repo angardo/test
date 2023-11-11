@@ -10,20 +10,18 @@ module tt_um_sumador (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+  wire [3:0] ina,inb;
+  reg [7:0] sum;
   
-  input  [3:0] ina,inb;
-  input cin;
-  output [3:0] sum;
-  output cout;
   
   assign ina[3:0] = ui_in[3:0];
   assign inbp[3:0] = ui_in[7:4];
-  
+    assign uo_out = oui_out;
  
   always@(posedge clk) begin
 
     if(reset) uio_out = 8'd0;
-    else uio_out = {3'd0,ina+inb};
+    else sum = {3'd0,ina+inb};
     
   end
 
